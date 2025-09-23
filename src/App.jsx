@@ -3,7 +3,7 @@ import logoImage from './assets/investment-calculator-logo.png'
 
 function App() {
 
-  // Logic adding
+  // Logic adding - working
 
   return (
     <>
