@@ -7,12 +7,33 @@ function App() {
 
   return (
     <>
-      <body>
-        <div id="header">
-          <img src={logoImage} alt="" />
-          <h1>React Investment Calculator</h1>
+      <div id="header">
+        <img src={logoImage} alt="" />
+        <h1>React Investment Calculator</h1>
+      </div>
+
+      <div id="user-input">
+        <div className="input-group">
+          <div>
+            <label>INICIAL INVESTMENT</label>
+            <input type="number" />
+          </div>
+          <div>
+            <label>ANUAL INVESTMENT</label>
+            <input type="number" />
+          </div>
         </div>
-      </body>
+        <div className="input-group">
+          <div>
+            <label>EXPECTED RETURN</label>
+            <input type="number" />
+          </div>
+          <div>
+            <label>DURATION</label>
+            <input type="number" />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
