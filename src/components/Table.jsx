@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { formatter } from "../util/investment"
 
 export default function Table({
     anualData, 
@@ -25,10 +25,10 @@ export default function Table({
                 {anualData.map((item, index) => (
                     <tr key={index}>
                         <td className="center">{item.year}</td>
-                        <td>${Math.round(item.valueEndOfYear)}</td>
-                        <td>${Math.round(item.interest)}</td>
-                        <td>${Math.round(item.valueEndOfYear - (Number(initialInvestment)+(index+1)*item.annualInvestment))}</td>
-                        <td>${Math.round(Number(initialInvestment)+(index+1)*item.annualInvestment)}</td>
+                        <td>{formatter.format(Math.round(item.valueEndOfYear))}</td>
+                        <td>{formatter.format(Math.round(item.interest))}</td>
+                        <td>{formatter.format(Math.round(item.valueEndOfYear - (Number(initialInvestment)+(index+1)*item.annualInvestment)))}</td>
+                        <td>{formatter.format(Math.round(Number(initialInvestment)+(index+1)*item.annualInvestment))}</td>
                     </tr>
                 ))}
             </tbody>
