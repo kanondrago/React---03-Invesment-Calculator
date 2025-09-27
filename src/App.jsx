@@ -27,8 +27,6 @@ function App() {
     setValue4(value);
   }
 
-
-
   // using util
   const data = {
     initialInvestment: +value1, 
@@ -40,8 +38,6 @@ function App() {
   // Calculator working
   const anualData = calculateInvestmentResults(data);
   
-  console.log('anualData: ', anualData);
-
   return (
     <>
 
@@ -58,9 +54,6 @@ function App() {
       <Table
         anualData={anualData}
         initialInvestment={value1}
-        annualInvestment={value2}
-        expectedReturn={value3}
-        duration={value4}
       >
       </Table>
     

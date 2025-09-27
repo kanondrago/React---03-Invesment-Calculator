@@ -3,10 +3,7 @@ import { formatter } from "../util/investment"
 
 export default function Table({
     anualData, 
-    initialInvestment, 
-    annualInvestment, 
-    expectedReturn,
-    duration
+    initialInvestment
 }) {
 
 
